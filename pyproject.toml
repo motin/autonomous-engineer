@@ -10,6 +10,7 @@ packages = [{include = "gen_ai_engineer"}]
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
 botocore = "^1.29.126"
+rasa = "^3.5.10"
 
 [build-system]
 requires = ["poetry-core"]

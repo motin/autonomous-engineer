@@ -12,6 +12,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+from abilities.hello_world.hello_world import get_hello_world_text
 
 class ActionHelloWorld(Action):
 
@@ -22,6 +23,7 @@ class ActionHelloWorld(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="Hello World!")
+        text = get_hello_world_text()
+        dispatcher.utter_message(text=text)
 
         return []

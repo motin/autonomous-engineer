@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "gen-ai-engineer"
+version = "0.1.0"
+description = "An experiment to see how well a LLM-powered assistant is able to perform tasks of a software engineer"
+authors = ["Motin <motin@motin.eu>"]
+license = "Apache-2.0 license"
+readme = "README.md"
+packages = [{include = "gen_ai_engineer"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

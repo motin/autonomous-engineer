@@ -5,7 +5,7 @@ description = "An experiment to see how well a LLM-powered assistant is able to 
 authors = ["Motin <motin@motin.eu>"]
 license = "Apache-2.0 license"
 readme = "README.md"
-packages = [{include = "gen_ai_engineer"}]
+packages = [{include = "abilities"}]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"

@@ -34,6 +34,7 @@ The assistant runs locally and interacts with existing engineering tooling.
 * Python 3.9
 * [Poetry](https://python-poetry.org/docs/#installation)
 * [tmux](https://github.com/tmux/tmux/wiki/Installing)
+* [ttyd](https://github.com/tsl0922/ttyd)
 * [Node.js](https://nodejs.org/en/download/)
 
 Install dependencies:

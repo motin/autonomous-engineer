@@ -10,8 +10,12 @@ procs:
   tmux_session:
     autostart: true
     cwd: '.'
-    shell: 'tmux has-session -t autonomous-engineer || tmux new-session -d -s autonomous-engineer'
+    shell: 'tmux has-session -t autonomous-engineer && tmux attach -t autonomous-engineer || tmux new-session -s autonomous-engineer'
   ui_dev:
     autostart: true
     cwd: './ui'
     shell: 'yarn start'
+  web_shell:
+    autostart: true
+    cwd: '.'
+    shell: 'ttyd tmux attach -t autonomous-engineer'

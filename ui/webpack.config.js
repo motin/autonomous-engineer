@@ -54,7 +54,7 @@ module.exports = {
   plugins: [
     // new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
-      title: "Demo Page",
+      title: "Autonomous Engineer UI",
       // Load a custom template (lodash by default)
       template: "public/webpack_template.html",
     }),

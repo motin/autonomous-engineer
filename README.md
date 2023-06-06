@@ -18,23 +18,29 @@ This repository contains:
 
 * `chatbot` - Rasa-boilerplate and configuration for the assistant's chat ability
 * `abilities` - Actuators/tools that the assistant needs to interact with its environment
+* `ui` - A hybrid traditional ui & chat interface with which the human can interact with and pair program with the assistant
 
 This repository will contain:
 
 * `prompts` - A set of prompts and chains used with LLMs to perform the above tasks
-* `ui` - A hybrid traditional ui & chat interface with which the human can interact with and pair program with the assistant
 * `docs` - Instructions on how to configure, extend and monitor the assistant
 
 The assistant runs locally and interacts with existing engineering tooling.
 
 ## Getting started
 
+_Note:_ The assistant is being developed using macOS. It may work on other Linux/Unix systems, but it has not been tested.
+
 ### Prerequisites
 
+Make sure these are installed and available in your `$PATH`:
+
 * Python 3.9
-* [Poetry](https://python-poetry.org/docs/#installation)
+* [poetry](https://python-poetry.org/docs/#installation)
 * [tmux](https://github.com/tmux/tmux/wiki/Installing)
-* [mprocs](https://github.com/pvolok/mprocs)
+* [ttyd](https://github.com/tsl0922/ttyd)
+* [Node.js](https://nodejs.org/en/download/)
+* [yarn](https://classic.yarnpkg.com/en/docs/install/)
 
 Install dependencies:
 
@@ -45,5 +51,7 @@ poetry install
 ## Launching the assistant
 
 ```shell
-mprocs
+npx mprocs
 ```
+
+http://localhost:3000 opens up with a UI for pair programming with the assistant.

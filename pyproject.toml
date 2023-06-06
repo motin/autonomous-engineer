@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "gen-ai-engineer"
+name = "autonomous-engineer"
 version = "0.1.0"
 description = "An experiment to see how well a LLM-powered assistant is able to perform tasks of a software engineer"
 authors = ["Motin <motin@motin.eu>"]

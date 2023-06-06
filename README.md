@@ -1,4 +1,4 @@
-# The Gen AI Engineer
+# The Autonomous Engineer
 
 An experiment to see how well a LLM-powered assistant is able to perform tasks of a software engineer:
 
@@ -14,12 +14,36 @@ An experiment to see how well a LLM-powered assistant is able to perform tasks o
 
 ## Overview
 
+This repository contains:
+
+* `chatbot` - Rasa-boilerplate and configuration for the assistant's chat ability
+* `abilities` - Actuators/tools that the assistant needs to interact with its environment
+
 This repository will contain:
 
-* `chatbot` - Rasa-boilerplate and configuration for the assistant's chat interface
 * `prompts` - A set of prompts and chains used with LLMs to perform the above tasks
-* `abilities` - Actuators/tools that the Gen AI Engineer needs to interact with its environment
-* `chat` - A chat interface with which the human can interact with the assistant
-* `docs` - Instructions on how to configure, extend and monitor the assistant regarding performance and costs
+* `ui` - A hybrid traditional ui & chat interface with which the human can interact with and pair program with the assistant
+* `docs` - Instructions on how to configure, extend and monitor the assistant
 
 The assistant runs locally and interacts with existing engineering tooling.
+
+## Getting started
+
+### Prerequisites
+
+* Python 3.9
+* [Poetry](https://python-poetry.org/docs/#installation)
+* [tmux](https://github.com/tmux/tmux/wiki/Installing)
+* [mprocs](https://github.com/pvolok/mprocs)
+
+Install dependencies:
+
+```shell
+poetry install
+```
+
+## Launching the assistant
+
+```shell
+mprocs
+```

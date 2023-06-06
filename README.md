@@ -16,7 +16,7 @@ An experiment to see how well a LLM-powered assistant is able to perform tasks o
 
 This repository will contain:
 
-* `assistant` - Rasa-boilerplate and configuration for the assistant
+* `chatbot` - Rasa-boilerplate and configuration for the assistant's chat interface
 * `prompts` - A set of prompts and chains used with LLMs to perform the above tasks
 * `abilities` - Actuators/tools that the Gen AI Engineer needs to interact with its environment
 * `chat` - A chat interface with which the human can interact with the assistant

@@ -1,0 +1,24 @@
+stories:
+- story: Test greeting
+  steps:
+  - user: "/greet"
+  - action: "action_hello_world"
+  - bot: "Hello, World!"
+
+- story: Test simple text input
+  steps:
+  - user: "Hi"
+  - action: "action_hello_world"
+  - bot: "Hello, World!"
+
+- story: Test complex text input
+  steps:
+  - user: "What's the meaning of life?"
+  - action: "action_hello_world"
+  - bot: "Hello, World!"
+
+- story: Test special character input
+  steps:
+  - user: "🎉"
+  - action: "action_hello_world"
+  - bot: "Hello, World!"

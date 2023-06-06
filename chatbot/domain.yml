@@ -1,0 +1,14 @@
+version: "3.1"
+
+intents:
+  - greet
+  - user_input:
+      use_entities: []
+  - .*
+
+actions:
+  - action_hello_world
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

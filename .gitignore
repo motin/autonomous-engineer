@@ -1,0 +1,13 @@
+.venv
+.env
+.idea
+.vscode
+.ruff_cache
+
+# Python
+*.pyc
+__pycache__
+.mypy_cache
+.ipynb_checkpoints
+.pytest_cache
+.python-version

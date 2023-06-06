@@ -29,13 +29,18 @@ The assistant runs locally and interacts with existing engineering tooling.
 
 ## Getting started
 
+_Note:_ The assistant is being developed using macOS. It may work on other Linux/Unix systems, but it has not been tested.
+
 ### Prerequisites
 
+Make sure these are installed and available in your `$PATH`:
+
 * Python 3.9
-* [Poetry](https://python-poetry.org/docs/#installation)
+* [poetry](https://python-poetry.org/docs/#installation)
 * [tmux](https://github.com/tmux/tmux/wiki/Installing)
 * [ttyd](https://github.com/tsl0922/ttyd)
 * [Node.js](https://nodejs.org/en/download/)
+* [yarn](https://classic.yarnpkg.com/en/docs/install/)
 
 Install dependencies:
 

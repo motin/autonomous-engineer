@@ -18,4 +18,4 @@ procs:
   web_shell:
     autostart: true
     cwd: '.'
-    shell: 'ttyd tmux attach -t autonomous-engineer'
+    shell: 'ttyd --check-origin -t disableLeaveAlert=true tmux attach -t autonomous-engineer'

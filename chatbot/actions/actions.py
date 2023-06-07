@@ -13,7 +13,8 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 from abilities.hello_world.hello_world import get_hello_world_text
-from abilities.tmux.interact import send_echo_hello_world
+from abilities.tmux.interact import send_echo_hello_world, split_pane_vertically, split_pane_horizontally
+from rasa_sdk.events import SlotSet
 
 class ActionHelloWorld(Action):
 
@@ -31,3 +32,23 @@ class ActionHelloWorld(Action):
         dispatcher.utter_message(text=text)
 
         return []
+
+
+class ActionSplitPaneHorizontally(Action):
+    def name(self):
+        return "action_split_pane_horizontally"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        text = split_pane_horizontally()
+        dispatcher.utter_message(text=text)
+        return [SlotSet("pane_split_direction", None)]  # Reset the slot after the action
+
+
+class ActionSplitPaneVertically(Action):
+    def name(self):
+        return "action_split_pane_vertically"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        text = split_pane_vertically()
+        dispatcher.utter_message(text=text)
+        return [SlotSet("pane_split_direction", None)]  # Reset the slot after the action

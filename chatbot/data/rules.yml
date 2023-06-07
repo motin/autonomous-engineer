@@ -1,7 +1,7 @@
 version: "3.1"
 
 rules:
-- rule: Universal rule
+- rule: Greet with hello world
   steps:
-  - intent: .*
+  - intent: greet
   - action: action_hello_world

@@ -89,3 +89,11 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: choose_split_direction
+  examples: |
+    - split pane
+    - I want to split the pane
+    - Please split the pane
+    - Can you split the pane?
+    - split the pane please

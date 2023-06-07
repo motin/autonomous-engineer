@@ -22,3 +22,9 @@ stories:
   - user: "🎉"
   - action: "action_hello_world"
   - bot: "Hello, World!"
+
+- story: Split pane
+  steps:
+  - user: "split pane"
+  - action: "utter_ask_split_direction"
+  - bot: "Would you like to split the pane horizontally or vertically?"

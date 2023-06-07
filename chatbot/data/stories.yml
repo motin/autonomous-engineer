@@ -9,3 +9,17 @@ stories:
     steps:
       - intent: user_input
       - action: action_hello_world
+  - story: choose split direction
+    steps:
+      - intent: choose_split_direction
+      - action: utter_ask_split_direction
+  - story: Split pane story
+    steps:
+      - intent: choose_split_direction
+        entities:
+          - pane_split_direction: horizontally
+      - action: action_split_pane_horizontally
+      - intent: choose_split_direction
+        entities:
+          - pane_split_direction: vertically
+      - action: action_split_pane_vertically

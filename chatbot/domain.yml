@@ -4,7 +4,7 @@ intents:
   - greet
   - user_input:
       use_entities: []
-  - choose_split_direction:
+  - split_pane:
       use_entities: [pane_split_direction]
   - .*
 
@@ -17,20 +17,20 @@ slots:
     mappings:
       - type: from_entity
         entity: pane_split_direction
+    influence_conversation: true
 
 responses:
   utter_ask_split_direction:
     - text: "Would you like to split the pane horizontally or vertically?"
       buttons:
       - title: "Horizontally"
-        payload: '/choose_split_direction{"pane_split_direction": "horizontally"}'
+        payload: '/split_pane{{"pane_split_direction": "horizontally"}}'
       - title: "Vertically"
-        payload: '/choose_split_direction{"pane_split_direction": "vertically"}'
+        payload: '/split_pane{{"pane_split_direction": "vertically"}}'
 
 actions:
   - action_hello_world
-  - action_split_pane_horizontally
-  - action_split_pane_vertically
+  - action_split_pane
 
 session_config:
   session_expiration_time: 60

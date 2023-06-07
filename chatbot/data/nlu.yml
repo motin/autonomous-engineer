@@ -90,10 +90,20 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: choose_split_direction
+- intent: split_pane
   examples: |
     - split pane
+    - split pane [horizontally](pane_split_direction)
+    - split pane [vertically](pane_split_direction)
     - I want to split the pane
+    - I want to split the pane [horizontally](pane_split_direction)
+    - I want to split the pane [vertically](pane_split_direction)
     - Please split the pane
+    - Please split the pane [horizontally](pane_split_direction)
+    - Please split the pane [vertically](pane_split_direction)
     - Can you split the pane?
+    - Can you split the pane [horizontally](pane_split_direction)?
+    - Can you split the pane [vertically](pane_split_direction)?
     - split the pane please
+    - split the pane [horizontally](pane_split_direction) please
+    - split the pane [vertically](pane_split_direction) please

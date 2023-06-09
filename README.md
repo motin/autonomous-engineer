@@ -54,4 +54,4 @@ poetry install
 npx mprocs
 ```
 
-http://localhost:3000 opens up with a UI for pair programming with the assistant.
+http://localhost:1337 opens up with a UI for pair programming with the assistant.

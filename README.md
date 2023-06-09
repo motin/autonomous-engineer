@@ -54,4 +54,12 @@ poetry install
 npx mprocs
 ```
 
-http://localhost:1337 opens up with a UI for pair programming with the assistant.
+http://localhost:1337 opens up with a UI for pair programming with the assistant (a chat interface and a terminal that both you and the assistant have access to).
+
+To use iTerm2 instead of the browser-based terminal, run:
+
+```shell
+tmux -CC attach -t autonomous-engineer
+```
+
+Source: https://iterm2.com/documentation-tmux-integration.html

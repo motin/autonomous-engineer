@@ -26,7 +26,7 @@
     "react-dom": "^18.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=1337 react-scripts start",
     "watch": "webpack --watch",
     "build": "webpack --mode=production --node-env=production",
     "build:prod": "webpack --mode=production --node-env=production",

@@ -1,11 +1,17 @@
 version: "3.1"
 
 stories:
-  - story: greet story
+  - story: Greet story
     steps:
       - intent: greet
       - action: action_hello_world
-  - story: user input story
+
+  - story: User input story
     steps:
       - intent: user_input
       - action: action_hello_world
+
+  - story: Split pane story
+    steps:
+      - intent: split_pane
+      - action: action_split_pane

@@ -13,7 +13,9 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 from abilities.hello_world.hello_world import get_hello_world_text
-from abilities.tmux.interact import send_echo_hello_world
+from abilities.tmux.interact import send_echo_hello_world, split_pane_vertically, split_pane_horizontally
+from rasa_sdk.events import SlotSet, FollowupAction
+
 
 class ActionHelloWorld(Action):
 
@@ -29,5 +31,35 @@ class ActionHelloWorld(Action):
 
         text = send_echo_hello_world()
         dispatcher.utter_message(text=text)
+
+        return []
+
+
+class ActionSplitPane(Action):
+
+    def name(self) -> Text:
+        return "action_split_pane"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        pane_split_direction = tracker.get_slot('pane_split_direction')
+
+        # If the direction is already known, skip the question
+        if pane_split_direction:
+            if pane_split_direction == 'horizontally':
+                text = split_pane_horizontally()
+                dispatcher.utter_message(text=text)
+                return []
+            elif pane_split_direction == 'vertically':
+                text = split_pane_vertically()
+                dispatcher.utter_message(text=text)
+                return []
+
+        # If the direction is not known, ask the question
+        dispatcher.utter_message(template="utter_ask_split_direction")
 
         return []

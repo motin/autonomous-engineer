@@ -12,6 +12,7 @@ python = ">=3.9,<3.11"
 botocore = "^1.29.126" # required version constraint for rasa to install
 rasa = "^3.5.10"
 libtmux = "^0.22.1"
+langchain = "^0.0.203"
 
 [tool.poetry.group.dev.dependencies]
 coverage = "^6.3.2"

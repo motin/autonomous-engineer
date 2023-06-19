@@ -37,7 +37,9 @@ build-backend = "poetry.core.masonry.api"
 test = ["pytest", "lint"]
 pytest = "pytest --cov=abilities --verbose tests/"
 lint = { shell = "find . -type d -name '.venv*' -prune -o -type f -name '*.py' -print0 | xargs -0 pre-commit run --files" }
+notebooks = ["install_kernel", "jupyter"]
 install_kernel = "python -m ipykernel install --user --name autonomous-engineer"
+jupyter = 'jupyter-notebook notebooks/'
 
 [tool.poe]
 envfile = ".env"

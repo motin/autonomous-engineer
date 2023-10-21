@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 from discord import Intents
 

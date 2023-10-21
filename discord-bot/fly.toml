@@ -9,10 +9,20 @@ primary_region = "arn"
 [env]
   PORT = "8080"
 
+[processes]
+  bot = "python main.py"
+  web = "gunicorn -k uvicorn.workers.UvicornWorker -w 1 -b 0.0.0.0:$PORT server:app"
+
 [http_service]
   internal_port = 8080
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
-  processes = ["app"]
+  processes = ["web"]
+
+[[services]]
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["bot"]

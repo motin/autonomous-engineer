@@ -51,10 +51,7 @@ class ActionSplitPane(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
-        pane_split_direction = tracker.get_slot("pane_split_direction")
-
-        # If the direction is already known, skip the question
-        if pane_split_direction:
+        if pane_split_direction := tracker.get_slot("pane_split_direction"):
             if pane_split_direction == "horizontally":
                 text = split_pane_horizontally()
                 dispatcher.utter_message(text=text)
